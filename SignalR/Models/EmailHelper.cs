@@ -11,7 +11,7 @@ namespace SignalR.Models
         public bool SendEmail(string userEmail, string confirmationLink)
         {
             MailMessage mailMessage = new MailMessage();
-            mailMessage.From = new MailAddress("nijatqasimov200@gmail.com");
+            mailMessage.From = new MailAddress("vugargrand@gmail.com");
             mailMessage.To.Add(new MailAddress(userEmail));
 
             mailMessage.Subject = "Confirm your email";
@@ -19,7 +19,7 @@ namespace SignalR.Models
             mailMessage.Body = confirmationLink;
 
             SmtpClient client = new SmtpClient();
-            client.Credentials = new System.Net.NetworkCredential("nijatqasimov200@gmail.com", "qgfymtjlbdnqjlge");
+            client.Credentials = new System.Net.NetworkCredential("vugargrand@gmail.com", "qgfymtjlbdnqjlge");
             client.Host = "smtp.gmail.com";
             client.Port = 587;
             client.EnableSsl = true;
