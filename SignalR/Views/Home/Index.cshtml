@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    string status;
+}
+<div class="container">
+    <div id="joinArea" class="row" >
+        <div class="col-6">
+            <form id="enterGroupForm">
+                <div class="form-group">
+                    <input type="text" id="username" class="form-control" required value="@ViewBag.User"/>
+                </div>
+                <div class="form-group">
+                    <select id="group" class="form-control">
+                        <option value="group1">group1</option>
+                        <option value="group2">group2</option>
+                        <option value="group3">group3</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success" id="joinGroup">Join Group</button>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-3 d-none" id="messageArea">
+        <button type="submit" class="btn btn-danger my-3 col-12" id="leaveGroupBtn">Leave Group</button>
+        <div class="col-4">
+
+            <form id="sendMessageForm">
+                <div class="form-group">
+                    <textarea class="form-control" ></textarea>
+                </div>
+                <button type="submit" class="btn btn-success my-3" id="sendMessageBtn">Send Message</button>
+            </form>
+        </div>
+        <div class="col-8">
+            <ul class="list-group" id="messages">
+                <li class="list-group-item">
+                    <b>Ramal</b>
+                    <p>Agalar salam</p>
+                </li>
+                <li class="list-group-item">
+                    <b>Agalar</b>
+                    <p>Salam aga</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts{
+    @*<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>*@
+    
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+    
+    <script src="~/js/chat.js"></script>
+}
